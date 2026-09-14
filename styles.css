@@ -184,34 +184,7 @@ button {
 }
 
 
-.viewer__poster {
-  width: 100%;
-  height: 100%;
 
-  display: grid;
-  place-items: center;
-
-  background: #fff;
-}
-
-
-.viewer__poster-surface {
-  width: 80%;
-  height: 50%;
-
-  border-radius: 50%;
-
-  filter: blur(24px);
-
-  background:
-    radial-gradient(
-      circle at 50% 50%,
-      rgba(0, 0, 0, 0.2),
-      transparent 65%
-    );
-
-  transform: translateY(28%);
-}
 
 
 /* =========================================================
