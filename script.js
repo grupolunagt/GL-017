@@ -33,7 +33,7 @@ const models = [
   {
     src: "models/GL-017.glb",
     iosSrc: "models/GL-017.usdz",
-    alt: "Juegos Infantiles GL-017",
+    alt: "Juegos Infantiles ",
   },
 ];
 
@@ -447,3 +447,30 @@ applyModel(
 );
 
 updateTutorial();
+
+
+/* =========================================================
+   PRELOAD USDZ FOR iOS AR
+========================================================= */
+
+const isIOS =
+  /iPad|iPhone|iPod/.test(navigator.userAgent) ||
+  (
+    navigator.platform === "MacIntel" &&
+    navigator.maxTouchPoints > 1
+  );
+
+if (isIOS) {
+  window.addEventListener("load", () => {
+    window.setTimeout(() => {
+      fetch(models[currentModelIndex].iosSrc, {
+        cache: "force-cache",
+      }).catch((error) => {
+        console.warn(
+          "USDZ preload failed:",
+          error
+        );
+      });
+    }, 2000);
+  });
+}
