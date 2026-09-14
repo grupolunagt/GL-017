@@ -461,16 +461,9 @@ const isIOS =
   );
 
 if (isIOS) {
-  window.addEventListener("load", () => {
-    window.setTimeout(() => {
-      fetch(models[currentModelIndex].iosSrc, {
-        cache: "force-cache",
-      }).catch((error) => {
-        console.warn(
-          "USDZ preload failed:",
-          error
-        );
-      });
-    }, 2000);
-  });
+ window.addEventListener("load", () => {
+  fetch(models[currentModelIndex].iosSrc, {
+    cache: "force-cache",
+  }).catch(() => {});
+});
 }
