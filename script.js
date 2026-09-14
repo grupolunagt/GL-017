@@ -31,9 +31,9 @@ const startARButton =
 
 const models = [
   {
-    src: "models/calistenia-mfc-02.glb",
-    iosSrc: "models/calistenia-mfc-02.usdz",
-    alt: "Equipo de Calistenia MFC-02",
+    src: "models/GL-017.glb",
+    iosSrc: "models/GL-017.usdz",
+    alt: "Juegos Infantiles GL-017",
   },
 ];
 
