@@ -180,7 +180,7 @@ button {
 
 
 .viewer::part(default-progress-bar) {
-  display: none;
+  display: block;
 }
 
 
